@@ -1,9 +1,8 @@
 import { useSelector } from 'react-redux'
 import { useState, useMemo } from 'react'
-
 import React, { createTheme, ThemeProvider } from '@mui/material/styles'
-
 import Square from './components/square/Square'
+import Header from './components/Header'
 
 const getDesignTokens = (mode: any) => ({
   palette: {
@@ -57,9 +56,12 @@ function App () {
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode])
 
   return (
-    <ThemeProvider theme={theme}>
-      <Square />
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        <Header />
+        <Square />
+      </ThemeProvider>
+    </>
   )
 }
 
