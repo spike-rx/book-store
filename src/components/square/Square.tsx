@@ -4,7 +4,7 @@ import React from 'react'
 import { useTheme } from '@mui/material/styles'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
-import { asyncToggleTheme, toggleTheme } from '../../store/reducers/themeSlice'
+import { toggleTheme } from '../../store/reducers/themeSlice'
 
 export default function Square () {
   const dispatch = useDispatch()
