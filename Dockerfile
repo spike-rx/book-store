@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.4
 
 # 1. For build React app
-FROM node:14.21.3-bullseye AS development
+FROM node:14.21.3-bullseye AS builder
 
 # Set working directory
 WORKDIR /app
@@ -39,7 +39,7 @@ ENV NODE_ENV production
 # Copy built assets from `builder` image
 COPY --from=builder /app/build /usr/share/nginx/html
 # Add your nginx.conf
-COPY --from=build /app/.nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/.nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port
 EXPOSE 80
