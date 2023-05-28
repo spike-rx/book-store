@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-end
+  labels:
+    app: book-store
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: book-store
+  template:
+    metadata:
+      name: book-store
+      labels:
+        app: book-store
+    spec:
+      containers:
+        - name: book-store
+          image: kennard1999/book-store:test
+          imagePullPolicy: IfNotPresent
+          ports:
+            -containerPort: 80
+      restartPolicy: Always
+
+

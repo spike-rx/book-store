@@ -16,21 +16,6 @@ RUN npm install
 RUN npm run build
 
 
-#FROM development as dev-envs
-#RUN <<EOF
-#apt-get update
-#apt-get install -y --no-install-recommends git
-#EOF
-#
-#RUN <<EOF
-#useradd -s /bin/bash -m bookStore
-#groupadd docker
-#usermod -aG docker bookStore
-#EOF
-## install Docker tools (cli, buildx, compose)
-#COPY --from=gloursdocker/docker / /
-#CMD [ "npm", "start" ]
-
 # 2. For Nginx setup
 
 # Copy config nginx
