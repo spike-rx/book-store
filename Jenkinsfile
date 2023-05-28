@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/spike-rx/book-store.git'
+        git 'https://gitee.com/carry_anyway/book-store.git'
       }
     }
 
