@@ -8,6 +8,12 @@ pipeline {
   agent any
 
   stages {
+    stage('Test') {
+     steps {
+       sh 'docker images'
+     }
+    }
+
 
     stage('Checkout Source') {
       steps {
