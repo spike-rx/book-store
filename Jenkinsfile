@@ -18,7 +18,9 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build dockerImageName
+          docker.withServer('tcp://212.129.223.183:2376/:2376') {
+            dockerImage = docker.withServer.build dockerImageName
+          }
         }
       }
     }
