@@ -23,7 +23,7 @@ pipeline {
                   def remote = [:]
                   remote.name = 'tencent'
 
-                  remote.host ='212.129.223.183:2376'
+                  remote.host ='212.129.223.183'
 
                   remote.user = 'casher'
 
