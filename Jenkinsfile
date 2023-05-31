@@ -30,10 +30,8 @@ pipeline {
                   remote.password ='963100'
 
                   remote.allowAnyHosts= true
-
-                  writeFile file:'jemeter.sh', text: 'cd /ibm \n ls'
-
-                  sshScript remote: remote,script: "jemeter.sh"
+                  sshCommand remote: remote, command: "ls -lrt"
+                  sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
         }
       }
     }
