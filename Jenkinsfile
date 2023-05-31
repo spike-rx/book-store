@@ -8,13 +8,6 @@ pipeline {
   agent any
 
   stages {
-    stage('Test') {
-     steps {
-       sh 'docker images'
-     }
-    }
-
-
     stage('Checkout Source') {
       steps {
         git 'https://gitee.com/carry_anyway/book-store.git'
