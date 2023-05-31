@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    dockerImageName = "kennard1999/book-store:test"
+    dockerImageName = "kennard1999/book-store:testV2"
     dockerImage = ""
   }
 
@@ -30,7 +30,7 @@ pipeline {
                   remote.password ='963100'
 
                   remote.allowAnyHosts= true
-                  sshCommand remote: remote, command: "cd /home/casher/book-store; git pull; docker build . -t book-store:test; docker push kennard1999/book-store:test"
+                  sshCommand remote: remote, command: "cd /home/casher/book-store; git pull; docker build . -t book-store:testV2; docker push kennard1999/book-store:testV2"
         }
       }
     }
