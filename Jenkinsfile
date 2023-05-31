@@ -23,7 +23,7 @@ pipeline {
                   def remote = [:]
                   remote.name = 'tencent'
 
-                  remote.host ='//212.129.223.183:2376'
+                  remote.host ='212.129.223.183:2376'
 
                   remote.user = 'casher'
 
@@ -62,3 +62,15 @@ pipeline {
   }
 
 }
+// node {
+//   def remote = [:]
+//   remote.name = 'Tencent'
+//   remote.host = 'test.domain.com'
+//   remote.user = 'root'
+//   remote.password = 'password'
+//   remote.allowAnyHosts = true
+//   stage('Remote SSH') {
+//     sshCommand remote: remote, command: "ls -lrt"
+//     sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
+//   }
+// }
