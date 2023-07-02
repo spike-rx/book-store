@@ -11,34 +11,34 @@ const ButtonStyle = styled.button`
 `
 
 export default function Navbar () {
-  return (
-    <Stack spacing={2} direction={'row'}>
-      <ButtonStyle>
-        <Button
-          variant="text"
-          href="/"
-          >
-          <Home />Home
-        </Button>
-      </ButtonStyle>
+    return (
+        <Stack spacing={2} direction={'row'}>
+            <ButtonStyle>
+                <Button
+                    variant="text"
+                    href="/"
+                >
+                    <Home/>Home
+                </Button>
+            </ButtonStyle>
 
-      <ButtonStyle>
-        <Button
-          variant="text"
-          href="/signin"
-          >
-          <SignIn />Sign in
-        </Button>
-      </ButtonStyle>
+            <ButtonStyle>
+                <Button
+                    variant="text"
+                    href="/signin"
+                >
+                    <SignIn/>Sign in
+                </Button>
+            </ButtonStyle>
 
-      <ButtonStyle>
-        <Button
-          variant="text"
-          href="/signup"
-          >
-          <SignUp />Sign up
-        </Button>
-      </ButtonStyle>
-    </Stack>
-  )
+            <ButtonStyle>
+                <Button
+                    variant="text"
+                    href="/signup"
+                >
+                    <SignUp/>Sign up
+                </Button>
+            </ButtonStyle>
+        </Stack>
+    )
 }
