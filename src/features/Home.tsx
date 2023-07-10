@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import Symbol from '../components/Symbol';
 export default function Home () {
 
-    useEffect(() => {
-        console.log(1);
-    }, [])
     return (
         <>
+            <Symbol/>
         </>
     )
 }

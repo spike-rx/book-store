@@ -3,7 +3,7 @@
 ### API
 https://api.realworld.io/api
 
-### Swagger 文档
+### Swagger
 https://realworld-docs.netlify.app/docs/specs/frontend-specs/swagger
 
 ### Demo
